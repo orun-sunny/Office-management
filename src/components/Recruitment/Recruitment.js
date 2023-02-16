@@ -5,7 +5,7 @@ export default function Recruitment() {
   const { register, control, handleSubmit } = useForm();
   const { fields, remove, append } = useFieldArray({
     control,
-    name: "students"
+    name: "employees"
   });
   // const subs = [
   //   { name: "Math", price: 20 },
@@ -17,16 +17,17 @@ export default function Recruitment() {
   return (
 <div className='h-[800px] flex justify-center items-center bg-zinc-300  '>
 <form className='w-96 p-2' onSubmit={handleSubmit(registerSubmit)}>
-<select className='w-full' {...register("Department", { required: true })}>
+<select className='w-full pb-2' {...register("Department", { required: true })}>
         <option value="select">Select Dept</option>
         <option value="Marketing">Marketing</option>
         <option value="Engineering">Engineering</option>
       </select>
     <br />
+    <label htmlFor="Deadline">DeadLine</label>
     <input
-    className='w-ful p-2'
+    className='w-full p-2'
       {...register("Start-date")}
-      placeholder="Date"
+      placeholder="YY-MM-DD"
       type="text"
     />
     <br />
@@ -56,7 +57,7 @@ export default function Recruitment() {
         />
         <br /> */}
         <input
-          {...register(`students[${index}].vacancy`)}
+          {...register(`employees[${index}].vacancy`)}
           placeholder="count-vacancy"
           className='w-96 p-2'
           defaultValue={vacancy}
@@ -64,7 +65,7 @@ export default function Recruitment() {
         />
         <br />
         <input
-          {...register(`students[${index}].details`)}
+          {...register(`employees[${index}].details`)}
           placeholder="paragraph"
           className='w-96 p-2 border-2'
           defaultValue={details}
