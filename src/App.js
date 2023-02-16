@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/Home/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Demo from './components/Demo/Demo';
+import Recruitment from './components/Recruitment/Recruitment';
 
 function App() {
   const router =createBrowserRouter([
@@ -14,6 +15,10 @@ function App() {
       path: "demo",
       element: <div><Demo/></div>
   },
+  {
+    path: "recruitment",
+    element: <div><Recruitment/></div>
+},
 
     // <Templates/>
 ])
