@@ -295,10 +295,11 @@ export const EmployeeDetails = () => {
 
                         {errors?.email?.type === "required" && <p>Wrong in this field</p>}
                     </div>
+                    <input type="submit" />
                 </div>
 
 
-                <input type="submit" />
+               
 
             </form>
 
