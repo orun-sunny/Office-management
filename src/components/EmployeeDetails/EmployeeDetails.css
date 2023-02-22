@@ -5,24 +5,24 @@ body {
       sans-serif;
   }
   
-  form {
+  /* form {
   
-    max-width: 800px;
+    max-width: 1600px;
     margin: 0 auto;
-  }
+  } */
   
   h1 {
     font-weight: 100;
     color: white;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
     border-bottom: 1px solid rgb(79, 98, 148);
   }
   
   .form {
     background: #0e101c;
-    max-width: 800px;
-    margin: 0 auto;
+   
+    /* margin: 0 auto; */
   }
   
   p {
@@ -35,7 +35,7 @@ body {
   } */
   
   input {
-    display: grid;
+
     box-sizing: border-box;
     width: 100%;
     border-radius: 4px;
@@ -45,8 +45,8 @@ body {
     font-size: 14px;
   }
   
-  label {
-    line-height: 2;
+  /* label {
+    line-height: 0;
     text-align: left;
     display: block;
     margin-bottom: 13px;
@@ -54,7 +54,7 @@ body {
     color: white;
     font-size: 14px;
     font-weight: 200;
-  }
+  } */
   
   button[type="submit"],
   input[type="submit"] {
@@ -98,7 +98,7 @@ body {
   }
   
   .App {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   

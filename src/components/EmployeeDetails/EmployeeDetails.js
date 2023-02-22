@@ -17,33 +17,37 @@ export const EmployeeDetails = () => {
     return (
         <>
             <h1>Personal information</h1>
-            <form className='grid grid-cols-3 gap-4' onSubmit={handleSubmit(onSubmit)}>
+            <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
                 {/* <h1>Personal information</h1> */}
-                <div>
 
-                    <label>First Name</label>
-                    <input
-                        {...register("firstName", {
-                            required: true,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i
-                        })}
-                    />
-                    {errors?.firstName?.type === "required" && <p>This field is required</p>}
-                    {errors?.firstName?.type === "maxLength" && (
-                        <p>First name cannot exceed 20 characters</p>
-                    )}
-                    {errors?.firstName?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
-                    )}
-                </div>
-                <div>
+                <div className='grid grid-cols-2 gap-4'>
+
+                    <div>
+                        <label>First Name</label>
+                        <input
+                            {...register("firstName", {
+                                required: true,
+                                maxLength: 20,
+                                pattern: /^[A-Za-z]+$/i
+                            })}
+                        />
+                        {errors?.firstName?.type === "required" && <p>This field is required</p>}
+                        {errors?.firstName?.type === "maxLength" && (
+                            <p>First name cannot exceed 20 characters</p>
+                        )}
+                        {errors?.firstName?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                        )}
+                    </div>
+                    <div>
                     <label>Last Name</label>
                     <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
                     {errors?.lastName?.type === "pattern" && (
                         <p>Alphabetical characters only</p>
                     )}
                 </div>
+                </div>
+             
                 <div>
                     <label>Designation</label>
                     <input
@@ -247,7 +251,7 @@ export const EmployeeDetails = () => {
                         <p>Alphabetical characters only</p>
                     )}
                 </div>
-         
+
                 <div>
                     <label>SpousePhone No</label>
                     <input
@@ -256,7 +260,7 @@ export const EmployeeDetails = () => {
                         })}
                     />
                 </div>
-           
+
 
                 <div>
                     <label>spouse Email</label>
