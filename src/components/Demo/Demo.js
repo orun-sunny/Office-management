@@ -6,7 +6,7 @@ function Demo() {
     // fetch('https://polls.apiblueprint.org/api/department')
     // TouchEvent(res =>res.json())
     // .then(data =>{})
-console.log(demos)
+// console.log(demos)
     useEffect (()=>{
         axios.get('https://private-155d5-officemanager.apiary-mock.com/api/department')
         .then(data =>{

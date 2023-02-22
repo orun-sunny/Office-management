@@ -4,6 +4,8 @@ import Home from './components/Home/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Demo from './components/Demo/Demo';
 import Recruitment from './components/Recruitment/Recruitment';
+import { EmployeeDetails } from './components/EmployeeDetails/EmployeeDetails';
+import Extra from './components/AdmissionForm/AdmissionForm';
 
 function App() {
   const router =createBrowserRouter([
@@ -18,6 +20,14 @@ function App() {
   {
     path: "recruitment",
     element: <div><Recruitment/></div>
+},
+{
+  path: "employee",
+  element: <div><EmployeeDetails/></div>
+},
+{
+  path: "extra",
+  element: <div><Extra/></div>
 },
 
     // <Templates/>
