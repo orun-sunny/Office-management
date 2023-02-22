@@ -14,8 +14,8 @@ body {
   h1 {
     font-weight: 100;
     color: white;
-    text-align: center;
-    padding-bottom: 50px;
+
+    padding-bottom: 20px;
     border-bottom: 1px solid rgb(79, 98, 148);
   }
   
@@ -45,7 +45,7 @@ body {
     font-size: 14px;
   }
   
-  /* label {
+  label {
     line-height: 0;
     text-align: left;
     display: block;
@@ -54,7 +54,7 @@ body {
     color: white;
     font-size: 14px;
     font-weight: 200;
-  } */
+  }
   
   button[type="submit"],
   input[type="submit"] {

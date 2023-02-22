@@ -40,241 +40,261 @@ export const EmployeeDetails = () => {
                         )}
                     </div>
                     <div>
-                    <label>Last Name</label>
-                    <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-                    {errors?.lastName?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
-                    )}
-                </div>
-                </div>
-             
-                <div>
-                    <label>Designation</label>
-                    <input
-                        {...register("Designation", {
-                            required: true,
-                        })}
-                    />
-                </div>
-                <div>
-                    <label>Office Id</label>
-                    <input
-                        {...register("id", {
-                            required: true,
-                        })}
-                    />
+                        <label>Last Name</label>
+                        <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
+                        {errors?.lastName?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                        )}
+                    </div>
                 </div>
 
-                <div>
-                    <label>Email</label>
-                    <input
-                        {...register("email", {
-                            required: true,
-                            pattern: {
-                                value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                message: 'Please enter a valid email',
-                            },
-                        })}
-                    />
+                <div className='grid grid-cols-4 gap-4'>
 
-                    {errors?.email?.type === "required" && <p>Wrong in this field</p>}
+
+                    <div>
+                        <label>Designation</label>
+                        <input
+                            {...register("Designation", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+                    <div>
+                        <label>Office Id</label>
+                        <input
+                            {...register("id", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <input
+                            {...register("email", {
+                                required: true,
+                                pattern: {
+                                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                    message: 'Please enter a valid email',
+                                },
+                            })}
+                        />
+
+                        {errors?.email?.type === "required" && <p>Wrong in this field</p>}
+                    </div>
+
+
+                    <div>
+
+                        <label>Age</label>
+                        <input {...register("age", { min: 18, max: 99 })} />
+                        {errors.age && (
+                            <p>You Must be older then 18 and younger then 99 years old</p>
+                        )}
+                    </div>
                 </div>
 
 
 
-                <div>
 
-                    <label>Age</label>
-                    <input {...register("age", { min: 18, max: 99 })} />
-                    {errors.age && (
-                        <p>You Must be older then 18 and younger then 99 years old</p>
-                    )}
+
+                {/* Emergency part is here */}
+                <h1>Emergency Contact</h1>
+
+                <div className='grid grid-cols-4 gap-2' >
+
+                    <div>
+
+
+                        <label>Emergency Contact Name</label>
+                        <input
+                            {...register("Name", {
+                                required: true,
+                                maxLength: 20,
+                                pattern: /^[A-Za-z]+$/i
+                            })}
+                        />
+                        {errors?.Name?.type === "required" && <p>This field is required</p>}
+                        {errors?.Name?.type === "maxLength" && (
+                            <p>First name cannot exceed 20 characters</p>
+                        )}
+                        {errors?.Name?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                        )}
+                    </div>
+                    <div>
+                        <label>Relationship</label>
+                        <input
+                            {...register("relationship", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+                    <div>
+                        <label>Emergency Phone No</label>
+                        <input
+                            {...register("Phone-No", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+                    <div>
+                        <label>Emergency Email</label>
+                        <input
+                            {...register("email", {
+                                required: true,
+                                pattern: {
+                                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                    message: 'Please enter a valid email',
+                                },
+                            })}
+                        />
+
+                        {errors?.email?.type === "required" && <p>Wrong in this field</p>}
+                    </div>
                 </div>
+                <hr />
 
-
-
-                <div>
-
-
-                    <label>Emergency Contact Name</label>
-                    <input
-                        {...register("Name", {
-                            required: true,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i
-                        })}
-                    />
-                    {errors?.Name?.type === "required" && <p>This field is required</p>}
-                    {errors?.Name?.type === "maxLength" && (
-                        <p>First name cannot exceed 20 characters</p>
-                    )}
-                    {errors?.Name?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
-                    )}
-                </div>
-                <div>
-                    <label>Relationship</label>
-                    <input
-                        {...register("relationship", {
-                            required: true,
-                        })}
-                    />
-                </div>
-                <div>
-                    <label>Emergency Phone No</label>
-                    <input
-                        {...register("Phone-No", {
-                            required: true,
-                        })}
-                    />
-                </div>
-                <div>
+                {/* <div>
                     <label>Parent Occupation</label>
                     <input
                         {...register("Occupation", {
                             required: true,
                         })}
                     />
+                </div> */}
+
+                <div className='grid grid-cols-4 gap-2'>
+                    <div>
+                        <label>Address</label>
+                        <input
+                            {...register("Address", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+
+                    <div>
+                        <label>Blood Group</label>
+                        <input
+                            {...register("Group", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+                    <div>
+                        <label>Present Address</label>
+                        <input
+                            {...register("Present-Address", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+                    <div>
+                        <label>Permanent Address</label>
+                        <input
+                            {...register("Permanent-Address", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+                </div>
+                <div className='grid grid-cols-3 gap-2'>
+                    <div>
+                        <label>NID No</label>
+                        <input
+                            {...register("NID-No", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+
+                    <div>
+
+
+                        <label>Fathers Name</label>
+                        <input
+                            {...register("FathersName", {
+                                required: true,
+
+                                pattern: /^[A-Za-z]+$/i
+                            })}
+                        />
+                        {errors?.FathersName?.type === "required" && <p>This field is required</p>}
+                        {errors?.FathersName?.type === "maxLength" && (
+                            <p>First name cannot exceed 20 characters</p>
+                        )}
+                        {errors?.FathersName?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                        )}
+                    </div>
+                    <div>
+
+
+                        <label>Mothers Name</label>
+                        <input
+                            {...register("MothersName", {
+                                required: true,
+
+                                pattern: /^[A-Za-z]+$/i
+                            })}
+                        />
+                        {errors?.MothersName?.type === "required" && <p>This field is required</p>}
+                        {errors?.MothersName?.type === "maxLength" && (
+                            <p>First name cannot exceed 20 characters</p>
+                        )}
+                        {errors?.MothersName?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                        )}
+                    </div>
                 </div>
 
-                <div>
-                    <label>Emergency Email</label>
-                    <input
-                        {...register("email", {
-                            required: true,
-                            pattern: {
-                                value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                message: 'Please enter a valid email',
-                            },
-                        })}
-                    />
+                <div className='grid grid-cols-3 gap-2'>
 
-                    {errors?.email?.type === "required" && <p>Wrong in this field</p>}
-                </div>
-                <div>
-                    <label>Address</label>
-                    <input
-                        {...register("Address", {
-                            required: true,
-                        })}
-                    />
-                </div>
-
-                <div>
-                    <label>Blood Group</label>
-                    <input
-                        {...register("Group", {
-                            required: true,
-                        })}
-                    />
-                </div>
-                <div>
-                    <label>Present Address</label>
-                    <input
-                        {...register("Present-Address", {
-                            required: true,
-                        })}
-                    />
-                </div>
-                <div>
-                    <label>Permanent Address</label>
-                    <input
-                        {...register("Permanent-Address", {
-                            required: true,
-                        })}
-                    />
-                </div>
-                <div>
-                    <label>NID No</label>
-                    <input
-                        {...register("NID-No", {
-                            required: true,
-                        })}
-                    />
-                </div>
-
-                <div>
+                    <div>
 
 
-                    <label>Fathers Name</label>
-                    <input
-                        {...register("FathersName", {
-                            required: true,
+                        <label>Spouse Name</label>
+                        <input
+                            {...register("Name", {
+                                required: true,
+                                maxLength: 20,
+                                pattern: /^[A-Za-z]+$/i
+                            })}
+                        />
+                        {errors?.Name?.type === "required" && <p>This field is required</p>}
+                        {errors?.Name?.type === "maxLength" && (
+                            <p>First name cannot exceed 20 characters</p>
+                        )}
+                        {errors?.Name?.type === "pattern" && (
+                            <p>Alphabetical characters only</p>
+                        )}
+                    </div>
 
-                            pattern: /^[A-Za-z]+$/i
-                        })}
-                    />
-                    {errors?.FathersName?.type === "required" && <p>This field is required</p>}
-                    {errors?.FathersName?.type === "maxLength" && (
-                        <p>First name cannot exceed 20 characters</p>
-                    )}
-                    {errors?.FathersName?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
-                    )}
-                </div>
-                <div>
-
-
-                    <label>Mothers Name</label>
-                    <input
-                        {...register("MothersName", {
-                            required: true,
-
-                            pattern: /^[A-Za-z]+$/i
-                        })}
-                    />
-                    {errors?.MothersName?.type === "required" && <p>This field is required</p>}
-                    {errors?.MothersName?.type === "maxLength" && (
-                        <p>First name cannot exceed 20 characters</p>
-                    )}
-                    {errors?.MothersName?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
-                    )}
-                </div>
-
-                <div>
+                    <div>
+                        <label>SpousePhone No</label>
+                        <input
+                            {...register("Phone-No", {
+                                required: true,
+                            })}
+                        />
+                    </div>
 
 
-                    <label>Spouse Name</label>
-                    <input
-                        {...register("Name", {
-                            required: true,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i
-                        })}
-                    />
-                    {errors?.Name?.type === "required" && <p>This field is required</p>}
-                    {errors?.Name?.type === "maxLength" && (
-                        <p>First name cannot exceed 20 characters</p>
-                    )}
-                    {errors?.Name?.type === "pattern" && (
-                        <p>Alphabetical characters only</p>
-                    )}
-                </div>
+                    <div>
+                        <label>spouse Email</label>
+                        <input
+                            {...register("email", {
+                                required: true,
+                                pattern: {
+                                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                    message: 'Please enter a valid email',
+                                },
+                            })}
+                        />
 
-                <div>
-                    <label>SpousePhone No</label>
-                    <input
-                        {...register("Phone-No", {
-                            required: true,
-                        })}
-                    />
-                </div>
-
-
-                <div>
-                    <label>spouse Email</label>
-                    <input
-                        {...register("email", {
-                            required: true,
-                            pattern: {
-                                value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                                message: 'Please enter a valid email',
-                            },
-                        })}
-                    />
-
-                    {errors?.email?.type === "required" && <p>Wrong in this field</p>}
+                        {errors?.email?.type === "required" && <p>Wrong in this field</p>}
+                    </div>
                 </div>
 
 
