@@ -260,6 +260,7 @@ export const EmployeeDetails = () => {
 
                         <label>Mothers Name</label>
                         <input
+                           className='focus:outline-none'
                             {...register("MothersName", {
                                 required: true,
 
@@ -283,6 +284,7 @@ export const EmployeeDetails = () => {
 
                         <label>Spouse Name</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Name", {
                                 required: true,
                                 maxLength: 20,
@@ -301,6 +303,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>SpousePhone No</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Phone-No", {
                                 required: true,
                             })}
@@ -311,6 +314,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>spouse Email</label>
                         <input
+                           className='focus:outline-none'
                             {...register("email", {
                                 required: true,
                                 pattern: {
@@ -332,6 +336,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Bank Account</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Bank-Account", {
                                 required: true,
                             })}
@@ -342,6 +347,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>TIN</label>
                         <input
+                           className='focus:outline-none'
                             {...register("TIM", {
                                 required: true,
 
