@@ -117,6 +117,7 @@ export const EmployeeDetails = () => {
                         <input
                            className='focus:outline-none'
                             {...register("Name", {
+                              
                                 required: true,
                                 maxLength: 20,
                                 pattern: /^[A-Za-z]+$/i
@@ -145,6 +146,7 @@ export const EmployeeDetails = () => {
                            className='focus:outline-none'
                             {...register("Phone-No", {
                                 required: true,
+                                type:"tel" ,
                             })}
                         />
                     </div>
@@ -199,7 +201,7 @@ export const EmployeeDetails = () => {
 
                             <option value="one">A+</option>
                             <option value="two">B+</option>
-                            <option value="three">o+</option>
+                            <option value="three">O+</option>
                             <option value="four">A-</option>
                             <option value="five">B-</option>
 
@@ -306,6 +308,7 @@ export const EmployeeDetails = () => {
                            className='focus:outline-none'
                             {...register("Phone-No", {
                                 required: true,
+
                             })}
                         />
                     </div>
@@ -348,7 +351,7 @@ export const EmployeeDetails = () => {
                         <label>TIN</label>
                         <input
                            className='focus:outline-none'
-                            {...register("TIM", {
+                            {...register("TIN", {
                                 required: true,
 
                             })}

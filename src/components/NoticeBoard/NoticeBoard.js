@@ -105,7 +105,7 @@ function NoticeBoard() {
 
                 <div>
                 <label>Notice Details</label>
-                    <textarea  className='w-96 focus:outline-none' {...register("First name", {required: true, max: 5, min: 1, maxLength: 100})} />
+                    <textarea  className='w-96 focus:outline-none' {...register("Notice Details", {required: true, max: 15, min: 5, maxLength: 100})} />
                 </div>
                 <div>
                     <label>Permanent Address</label>
@@ -117,8 +117,8 @@ function NoticeBoard() {
                     />
                 </div>
             </div>
-            <div className=' w-56  items-center'>
-                <input className='w-56 ' type="submit" />
+            <div className=' w-56 '>
+                <input className='w-56  items-center ' type="submit" />
             </div>
         </form>
     )
