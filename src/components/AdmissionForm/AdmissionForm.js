@@ -532,7 +532,7 @@ const AdmissionForm = () => {
 
                         <div className="flex items-center gap-6">
                             <div class="my-4 relative w-full py-2">
-                                <input type="text" name="nid"
+                                <input type="number" name="nid"
                                     className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
                                     placeholder="Local Guardian NID"  {...register("local_parent_nid", {
                                         required: {
@@ -545,7 +545,7 @@ const AdmissionForm = () => {
                                     <span className="label-text-alt text-xs text-red-600">{errors.local_parent_nid.message}</span>}
                             </div>
                             <div class="my-4 relative w-full py-2">
-                                <input type="text" name="name"
+                                <input type="number" name="name"
                                     className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
                                     placeholder="Local Guardian phone"  {...register("local_parent_phone", {
                                         required: {
@@ -557,6 +557,36 @@ const AdmissionForm = () => {
                                 {errors.local_parent_phone?.type === 'required' &&
                                     <span className="label-text-alt text-xs text-red-600">{errors.local_parent_phone.message}</span>}
                             </div>
+                        </div>
+
+                    </div>
+                    <div>
+
+                        <div class="my-4 relative w-full py-2">
+                            <input type="number" name="name"
+                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
+                                placeholder="Local Guardian phone"  {...register("local_parent_phone", {
+                                    required: {
+                                        value: true,
+                                        message: 'Local Guardian Phone is Required'
+                                    }
+                                })} />
+                            <label htmlFor="local_parent_phone" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Phone Number</label>
+                            {errors.local_parent_phone?.type === 'required' &&
+                                <span className="label-text-alt text-xs text-red-600">{errors.local_parent_phone.message}</span>}
+                        </div>
+                        <div class="my-4 relative w-full py-2">
+                            <input type="number" name="name"
+                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
+                                placeholder="Local Guardian phone"  {...register("local_parent_phone", {
+                                    required: {
+                                        value: true,
+                                        message: 'Local Guardian Phone is Required'
+                                    }
+                                })} />
+                            <label htmlFor="local_parent_phone" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Phone Number</label>
+                            {errors.local_parent_phone?.type === 'required' &&
+                                <span className="label-text-alt text-xs text-red-600">{errors.local_parent_phone.message}</span>}
                         </div>
 
                     </div>

@@ -106,7 +106,7 @@ export const EmployeeDetails = () => {
                     <div>
 
 
-                        <label>Emergency Contact Name</label>
+                        <label>Contact Name</label>
                         <input
                             {...register("Name", {
                                 required: true,
@@ -131,7 +131,7 @@ export const EmployeeDetails = () => {
                         />
                     </div>
                     <div>
-                        <label>Emergency Phone No</label>
+                        <label>Phone No</label>
                         <input
                             {...register("Phone-No", {
                                 required: true,
@@ -176,11 +176,21 @@ export const EmployeeDetails = () => {
 
                     <div>
                         <label>Blood Group</label>
-                        <input
-                            {...register("Group", {
-                                required: true,
-                            })}
-                        />
+                        <select name="class"
+                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
+                                {...register("class", {
+                                    required: {
+                                        message: 'Class is Required'
+                                    }
+                                })}>
+
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                                <option value="three">Three</option>
+                                <option value="four">Four</option>
+                                <option value="five">Five</option>
+
+                            </select>
                     </div>
                     <div>
                         <label>Present Address</label>
@@ -295,11 +305,40 @@ export const EmployeeDetails = () => {
 
                         {errors?.email?.type === "required" && <p>Wrong in this field</p>}
                     </div>
-                    <input type="submit" />
+
                 </div>
 
+                <div className='grid grid-cols-2 gap-2'>
 
-               
+          
+
+                    <div>
+                        <label>Bank Account</label>
+                        <input
+                            {...register("Bank-Account", {
+                                required: true,
+                            })}
+                        />
+                    </div>
+
+
+                    <div>
+                        <label>TIN</label>
+                        <input
+                            {...register("TIM", {
+                                required: true,
+                            
+                            })}
+                        />
+
+                   
+                    </div>
+
+                </div>
+                <input type="submit" />
+
+
+
 
             </form>
 

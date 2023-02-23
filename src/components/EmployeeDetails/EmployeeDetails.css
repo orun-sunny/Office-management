@@ -63,7 +63,7 @@ body {
     text-transform: uppercase;
     border: none;
     margin-top: 40px;
-    padding: 20px;
+    padding: 10px;
     font-size: 16px;
     font-weight: 100;
     letter-spacing: 10px;
@@ -98,7 +98,7 @@ body {
   }
   
   .App {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
   }
   
@@ -109,7 +109,7 @@ body {
     color: white;
     border: none;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 4px;
   }
   
@@ -121,10 +121,10 @@ body {
   justify-items: center;
     appearance: none;
     margin-top: 40px;
-    border: 1px solid #333;
+    /* border: 1px solid #333;
     margin-bottom: 20px;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 10px 20px; */
     border-radius: 4px;
   }
   
