@@ -6,6 +6,7 @@ import Demo from './components/Demo/Demo';
 import Recruitment from './components/Recruitment/Recruitment';
 import { EmployeeDetails } from './components/EmployeeDetails/EmployeeDetails';
 import Extra from './components/AdmissionForm/AdmissionForm';
+import NoticeBoard from './components/NoticeBoard/NoticeBoard';
 
 function App() {
   const router =createBrowserRouter([
@@ -28,6 +29,10 @@ function App() {
 {
   path: "extra",
   element: <div><Extra/></div>
+},
+{
+  path: "notice",
+  element: <div><NoticeBoard/></div>
 },
 
     // <Templates/>

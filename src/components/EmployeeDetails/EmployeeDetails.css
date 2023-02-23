@@ -58,6 +58,9 @@ body {
   
   button[type="submit"],
   input[type="submit"] {
+  color: white;
+  }
+  /* input[type="submit"] {
     background: #ec5990;
     color: white;
     text-transform: uppercase;
@@ -68,7 +71,7 @@ body {
     font-weight: 100;
     letter-spacing: 10px;
   }
-  
+   */
   button[type="submit"]:hover,
   input[type="submit"]:hover {
     background: #bf1650;

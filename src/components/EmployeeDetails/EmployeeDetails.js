@@ -22,9 +22,10 @@ export const EmployeeDetails = () => {
 
                 <div className='grid grid-cols-2 gap-4'>
 
-                    <div>
-                        <label>First Name</label>
+                    <div >
+                        <label >First Name</label>
                         <input
+                        className='focus:outline-none'
                             {...register("firstName", {
                                 required: true,
                                 maxLength: 20,
@@ -41,7 +42,9 @@ export const EmployeeDetails = () => {
                     </div>
                     <div>
                         <label>Last Name</label>
-                        <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
+                        <input
+                          className='focus:outline-none'
+                         {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
                         {errors?.lastName?.type === "pattern" && (
                             <p>Alphabetical characters only</p>
                         )}
@@ -54,6 +57,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Designation</label>
                         <input
+                          className='focus:outline-none'
                             {...register("Designation", {
                                 required: true,
                             })}
@@ -62,6 +66,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Office Id</label>
                         <input
+                           className='focus:outline-none'
                             {...register("id", {
                                 required: true,
                             })}
@@ -71,6 +76,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Email</label>
                         <input
+                           className='focus:outline-none'
                             {...register("email", {
                                 required: true,
                                 pattern: {
@@ -87,7 +93,8 @@ export const EmployeeDetails = () => {
                     <div>
 
                         <label>Age</label>
-                        <input {...register("age", { min: 18, max: 99 })} />
+                        <input    className='focus:outline-none'
+                        {...register("age", { min: 18, max: 99 })} />
                         {errors.age && (
                             <p>You Must be older then 18 and younger then 99 years old</p>
                         )}
@@ -108,6 +115,7 @@ export const EmployeeDetails = () => {
 
                         <label>Contact Name</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Name", {
                                 required: true,
                                 maxLength: 20,
@@ -125,6 +133,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Relationship</label>
                         <input
+                           className='focus:outline-none'
                             {...register("relationship", {
                                 required: true,
                             })}
@@ -133,6 +142,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Phone No</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Phone-No", {
                                 required: true,
                             })}
@@ -141,6 +151,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Emergency Email</label>
                         <input
+                           className='focus:outline-none'
                             {...register("email", {
                                 required: true,
                                 pattern: {
@@ -168,6 +179,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Address</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Address", {
                                 required: true,
                             })}
@@ -177,24 +189,26 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Blood Group</label>
                         <select name="class"
-                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                {...register("class", {
-                                    required: {
-                                        message: 'Class is Required'
-                                    }
-                                })}>
+                            className="shadow_0 peer   border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
+                            
+                            {...register("class", {
+                                required: {
+                                    message: 'Class is Required'
+                                }
+                            })}>
 
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                                <option value="four">Four</option>
-                                <option value="five">Five</option>
+                            <option value="one">A+</option>
+                            <option value="two">B+</option>
+                            <option value="three">o+</option>
+                            <option value="four">A-</option>
+                            <option value="five">B-</option>
 
-                            </select>
+                        </select>
                     </div>
                     <div>
                         <label>Present Address</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Present-Address", {
                                 required: true,
                             })}
@@ -203,6 +217,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>Permanent Address</label>
                         <input
+                           className='focus:outline-none'
                             {...register("Permanent-Address", {
                                 required: true,
                             })}
@@ -213,6 +228,7 @@ export const EmployeeDetails = () => {
                     <div>
                         <label>NID No</label>
                         <input
+                           className='focus:outline-none'
                             {...register("NID-No", {
                                 required: true,
                             })}
@@ -224,6 +240,7 @@ export const EmployeeDetails = () => {
 
                         <label>Fathers Name</label>
                         <input
+                           className='focus:outline-none'
                             {...register("FathersName", {
                                 required: true,
 
@@ -310,7 +327,7 @@ export const EmployeeDetails = () => {
 
                 <div className='grid grid-cols-2 gap-2'>
 
-          
+
 
                     <div>
                         <label>Bank Account</label>
@@ -327,15 +344,17 @@ export const EmployeeDetails = () => {
                         <input
                             {...register("TIM", {
                                 required: true,
-                            
+
                             })}
                         />
 
-                   
+
                     </div>
 
                 </div>
-                <input type="submit" />
+                <div className=' w-56  items-center'>
+                <input className='w-56 ' type="submit" />
+                </div>
 
 
 
