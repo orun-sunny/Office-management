@@ -55,7 +55,7 @@ function NoticeBoard() {
     return (
 
         <form className='w-96' onSubmit={handleSubmit(onSubmit)}>
-            <h1 className='text-white no-underline'>notice board part-Role-hr </h1>
+            <h1 className='text-black no-underline'>notice board part-Role-hr </h1>
             <div className='grid grid-cols-1 gap-2'>
                 <div className="relative w-28 h-28">
                     <img className="w-full h-full rounded-full" src={employeeImage} />
@@ -94,7 +94,7 @@ function NoticeBoard() {
                 <div>
                     <label>Notice HeadLine</label>
                     <input
-                        className='focus:outline-none'
+                        className='form-input'
                         {...register("Address", {
                             required: true,
                             type: "text"
@@ -105,12 +105,12 @@ function NoticeBoard() {
 
                 <div>
                 <label>Notice Details</label>
-                    <textarea  className='w-96 focus:outline-none' {...register("Notice Details", {required: true, max: 15, min: 5, maxLength: 100})} />
+                    <textarea  className='w-96 form-input' {...register("Notice Details", {required: true, max: 15, min: 5, maxLength: 100})} />
                 </div>
                 <div>
                     <label>Permanent Address</label>
                     <input
-                        className='focus:outline-none'
+                        className='form-input'
                         {...register("Permanent-Address", {
                             required: true,
                         })}
@@ -118,7 +118,7 @@ function NoticeBoard() {
                 </div>
             </div>
             <div className=' w-56 '>
-                <input className='w-56 text-black items-center ' type="submit" />
+                <input className='bg-blue-600 text-white font-semibold text-center p-3 rounded-md ' type="submit" />
             </div>
         </form>
     )
