@@ -90,13 +90,18 @@ function NoticeBoard() {
                         })}>
 
                         <option value="one">Urgent</option>
-                        <option value="two">General</option>
+                        <option value="t
+                        
 
 
                     </select>
                 </div> */}
 
-                
+
+
+              
+
+
 
 
 
@@ -115,7 +120,7 @@ function NoticeBoard() {
                 </div>
 
 
-             
+
                 <div>
                     <label>Duration</label>
                     <input
