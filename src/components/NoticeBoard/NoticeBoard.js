@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form';
 import user from "../../components/images/user.webp";
 import { AiOutlineCamera } from "react-icons/ai";
+import { Button } from '@mui/material';
 
 
 function NoticeBoard() {
@@ -14,7 +15,7 @@ function NoticeBoard() {
         formState: { errors }
     } = useForm();
 
-   
+
 
     const handleEmployeeImage = (e) => {
         console.log(e.target.files);
@@ -54,10 +55,10 @@ function NoticeBoard() {
     const onSubmit = (data) => console.log(data);
     return (
 
-        <form className='w-96' onSubmit={handleSubmit(onSubmit)}>
+        <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
             <h1 className='text-black no-underline'>notice board part-Role-hr </h1>
             <div className='grid grid-cols-1 gap-2'>
-                <div className="relative w-28 h-28">
+                {/* <div className="relative w-28 h-28">
                     <img className="w-full h-full rounded-full" src={employeeImage} />
                     <input
                         {...register("profile_photo_url", {
@@ -72,9 +73,12 @@ function NoticeBoard() {
                     <div className="w-9 h-9 bg-gray-100 rounded-full absolute bottom-0 right-2 flex justify-center items-center">
                         <AiOutlineCamera className="text-2xl"></AiOutlineCamera>
                     </div>
-                </div>
-                {errors.profile_photo_url?.type === 'required' &&
-                    <span className="label-text-alt text-xs text-red-600">{errors.profile_photo_url.message}</span>}
+                </div> */}
+                {/* {errors.profile_photo_url?.type === 'required' &&
+                    <span className="label-text-alt text-xs text-red-600">{errors.profile_photo_url.message}</span>} */}
+
+
+
                 <div>
                     <label>Blood Group</label>
                     <select name="class"
@@ -91,6 +95,14 @@ function NoticeBoard() {
 
                     </select>
                 </div>
+
+                <input ref={register} type="file" name="picture" />
+                <button>Submit</button>
+
+
+
+
+
                 <div>
                     <label>Notice HeadLine</label>
                     <input
@@ -104,8 +116,8 @@ function NoticeBoard() {
 
 
                 <div>
-                <label>Notice Details</label>
-                    <textarea  className='w-96 form-input' {...register("Notice Details", {required: true, max: 15, min: 5, maxLength: 100})} />
+                    <label>Notice Details</label>
+                    <textarea className='w-96 form-input' {...register("Notice Details", { required: true, max: 15, min: 5, maxLength: 100 })} />
                 </div>
                 <div>
                     <label>Permanent Address</label>
@@ -119,6 +131,7 @@ function NoticeBoard() {
             </div>
             <div className=' w-56 '>
                 <input className='bg-blue-600 text-white font-semibold text-center p-3 rounded-md ' type="submit" />
+                {/* <Button variant="contained">Contained</Button> */}
             </div>
         </form>
     )
