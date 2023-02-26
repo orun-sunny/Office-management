@@ -8,6 +8,7 @@ import { EmployeeDetails } from './components/EmployeeDetails/EmployeeDetails';
 import Extra from './components/AdmissionForm/AdmissionForm';
 import NoticeBoard from './components/NoticeBoard/NoticeBoard';
 import Modal from './Modal/Modal';
+import Provident from './components/Provident/Provident';
 
 function App() {
   const router =createBrowserRouter([
@@ -39,6 +40,11 @@ function App() {
   path: "modal",
   element: <div><Modal/></div>
 },
+{
+  path: "provident",
+  element: <div><Provident/></div>
+},
+
 
     // <Templates/>
 ])
