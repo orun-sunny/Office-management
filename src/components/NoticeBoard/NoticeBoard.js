@@ -17,18 +17,18 @@ function NoticeBoard() {
 
 
 
-    const handleEmployeeImage = (e) => {
-        console.log(e.target.files);
-        const file = e.target.files[0];
-        const fileReader = new FileReader();
-        if (file) {
-            fileReader.readAsDataURL(file);
-            fileReader.onload = () => {
-                setEmployeeImage(fileReader.result);
-            }
-        }
+    // const handleEmployeeImage = (e) => {
+    //     console.log(e.target.files);
+    //     const file = e.target.files[0];
+    //     const fileReader = new FileReader();
+    //     if (file) {
+    //         fileReader.readAsDataURL(file);
+    //         fileReader.onload = () => {
+    //             setEmployeeImage(fileReader.result);
+    //         }
+    //     }
 
-    }
+    // }
 
     // const ParseTextarea = ({ value = [], onChange }) => {
     //     const [text, setText] = React.useState<string>(value.join("\n"));
@@ -56,8 +56,8 @@ function NoticeBoard() {
     return (
 
         <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
-            <h1 className='text-black no-underline'>notice board part-Role-hr </h1>
-            <div className='grid grid-cols-1 gap-2'>
+            <h1 className='text-black no-underline'>Provident Fund </h1>
+            <div className=''>
                 {/* <div className="relative w-28 h-28">
                     <img className="w- h-full" src={employeeImage} />
                     <input
@@ -79,7 +79,7 @@ function NoticeBoard() {
 
 
 
-                <div>
+                {/* <div>
                     <label>Blood Group</label>
                     <select name="class"
                         className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
@@ -94,20 +94,18 @@ function NoticeBoard() {
 
 
                     </select>
-                </div>
+                </div> */}
 
-                <input ref={register} type="file" name="picture" />
-                <button>Submit</button>
 
 
 
 
 
                 <div>
-                    <label>Notice HeadLine</label>
+                    <label>Amount</label>
                     <input
-                        className='form-input'
-                        {...register("Address", {
+                        className=' border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black'
+                        {...register("Amount", {
                             required: true,
                             type: "text"
                         })}
@@ -115,15 +113,12 @@ function NoticeBoard() {
                 </div>
 
 
+             
                 <div>
-                    <label>Notice Details</label>
-                    <textarea className='w-96 form-input' {...register("Notice Details", { required: true, max: 15, min: 5, maxLength: 100 })} />
-                </div>
-                <div>
-                    <label>Permanent Address</label>
+                    <label>Duration</label>
                     <input
-                        className='form-input'
-                        {...register("Permanent-Address", {
+                        className=' border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black'
+                        {...register("Duration", {
                             required: true,
                         })}
                     />
