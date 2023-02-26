@@ -82,8 +82,8 @@ const useModal = ({ id, modalName }) => {
                                        
                                     </div>
                                 </div> */}
-                                {errors.profile_photo_url?.type === 'required' &&
-                                    <span className="label-text-alt text-xs text-red-600">{errors.profile_photo_url.message}</span>}
+                                {/* {errors.profile_photo_url?.type === 'required' &&
+                                    <span className="label-text-alt text-xs text-red-600">{errors.profile_photo_url.message}</span>} */}
                                 
                                 <div className="">
 
@@ -99,7 +99,7 @@ const useModal = ({ id, modalName }) => {
                                       {errors?.notice?.type === "required" && <p>This field is required</p>}
                                 </div>
 
-                                <input ref={register} type="file" name="picture" />
+                                {/* <input ref={register} type="file" name="picture" /> */}
 
 
                                 <div>
@@ -129,6 +129,11 @@ const useModal = ({ id, modalName }) => {
 
 
                                     </select>
+                                </div>
+                                <div className="mb-2">
+                                    <input {...register('file', { required: true })} type="file" name='image' />
+                                    {errors?.file?.type === "required" && <p>This field is required</p>}
+                                    <div className="w-9 h-9 bg-gray-100 rounded-full absolute bottom-0 right-2 flex justify-center items-center"></div>
                                 </div>
                             </div>
                             <div className=' w-56 '>
