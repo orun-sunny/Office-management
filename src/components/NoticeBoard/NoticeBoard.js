@@ -59,7 +59,7 @@ function NoticeBoard() {
             <h1 className='text-black no-underline'>notice board part-Role-hr </h1>
             <div className='grid grid-cols-1 gap-2'>
                 {/* <div className="relative w-28 h-28">
-                    <img className="w-full h-full rounded-full" src={employeeImage} />
+                    <img className="w- h-full" src={employeeImage} />
                     <input
                         {...register("profile_photo_url", {
                             required: {
