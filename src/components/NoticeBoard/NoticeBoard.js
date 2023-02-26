@@ -118,7 +118,7 @@ function NoticeBoard() {
                 </div>
             </div>
             <div className=' w-56 '>
-                <input className='w-56  items-center ' type="submit" />
+                <input className='w-56 text-black items-center ' type="submit" />
             </div>
         </form>
     )

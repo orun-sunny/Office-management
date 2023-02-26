@@ -23,9 +23,9 @@ export const EmployeeDetails = () => {
                 <div className='grid grid-cols-2 gap-4'>
 
                     <div >
-                        <label >First Name</label>
+                        <label className='text-black'>First Name</label>
                         <input
-                        className='focus:outline-none'
+                        className='form-input'
                             {...register("firstName", {
                                 required: true,
                                 maxLength: 20,
@@ -41,9 +41,9 @@ export const EmployeeDetails = () => {
                         )}
                     </div>
                     <div>
-                        <label>Last Name</label>
+                        <label className='text-black'>Last Name</label>
                         <input
-                          className='focus:outline-none'
+                          className='form-input'
                          {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
                         {errors?.lastName?.type === "pattern" && (
                             <p>Alphabetical characters only</p>
@@ -55,18 +55,18 @@ export const EmployeeDetails = () => {
 
 
                     <div>
-                        <label>Designation</label>
+                        <label className='text-black'>Designation</label>
                         <input
-                          className='focus:outline-none'
+                          className='form-input'
                             {...register("Designation", {
                                 required: true,
                             })}
                         />
                     </div>
                     <div>
-                        <label>Office Id</label>
+                        <label className='text-black'>Office Id</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("id", {
                                 required: true,
                             })}
@@ -74,9 +74,9 @@ export const EmployeeDetails = () => {
                     </div>
 
                     <div>
-                        <label>Email</label>
+                        <label className='text-black'>Email</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("email", {
                                 required: true,
                                 pattern: {
@@ -92,8 +92,8 @@ export const EmployeeDetails = () => {
 
                     <div>
 
-                        <label>Age</label>
-                        <input    className='focus:outline-none'
+                        <label className='text-black'>Age</label>
+                        <input    className='form-input'
                         {...register("age", { min: 18, max: 99 })} />
                         {errors.age && (
                             <p>You Must be older then 18 and younger then 99 years old</p>
@@ -106,16 +106,16 @@ export const EmployeeDetails = () => {
 
 
                 {/* Emergency part is here */}
-                <h1>Emergency Contact</h1>
+                <h1 className='text-black'>Emergency Contact</h1>
 
                 <div className='grid grid-cols-4 gap-2' >
 
                     <div>
 
 
-                        <label>Contact Name</label>
+                        <label className='text-black'>Contact Name</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Name", {
                               
                                 required: true,
@@ -132,18 +132,18 @@ export const EmployeeDetails = () => {
                         )}
                     </div>
                     <div>
-                        <label>Relationship</label>
+                        <label className='text-black'>Relationship</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("relationship", {
                                 required: true,
                             })}
                         />
                     </div>
                     <div>
-                        <label>Phone No</label>
+                        <label className='text-black'>Phone No</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Phone-No", {
                                 required: true,
                                 type:"tel" ,
@@ -151,9 +151,9 @@ export const EmployeeDetails = () => {
                         />
                     </div>
                     <div>
-                        <label>Emergency Email</label>
+                        <label className='text-black'>Emergency Email</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("email", {
                                 required: true,
                                 pattern: {
@@ -179,9 +179,9 @@ export const EmployeeDetails = () => {
 
                 <div className='grid grid-cols-4 gap-2'>
                     <div>
-                        <label>Address</label>
+                        <label className='text-black'>Address</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Address", {
                                 required: true,
                             })}
@@ -189,11 +189,12 @@ export const EmployeeDetails = () => {
                     </div>
 
                     <div>
-                        <label>Blood Group</label>
+                        <label className='text-black'>Blood Group</label>
                         <select name="class"
-                            className="shadow_0 peer   border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
+                            className="shadow_0 peer   border-b-2 border-gray-400 outline-1  text-gray-900  form-input"
                             
                             {...register("class", {
+                              
                                 required: {
                                     message: 'Class is Required'
                                 }
@@ -204,22 +205,23 @@ export const EmployeeDetails = () => {
                             <option value="three">O+</option>
                             <option value="four">A-</option>
                             <option value="five">B-</option>
+                            <option value="six">AB</option>
 
                         </select>
                     </div>
                     <div>
-                        <label>Present Address</label>
+                        <label className='text-black'>Present Address</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Present-Address", {
                                 required: true,
                             })}
                         />
                     </div>
                     <div>
-                        <label>Permanent Address</label>
+                        <label className='text-black'>Permanent Address</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Permanent-Address", {
                                 required: true,
                             })}
@@ -228,9 +230,9 @@ export const EmployeeDetails = () => {
                 </div>
                 <div className='grid grid-cols-3 gap-2'>
                     <div>
-                        <label>NID No</label>
+                        <label className='text-black'>NID No</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("NID-No", {
                                 required: true,
                             })}
@@ -240,9 +242,9 @@ export const EmployeeDetails = () => {
                     <div>
 
 
-                        <label>Fathers Name</label>
+                        <label className='text-black'>Fathers Name</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("FathersName", {
                                 required: true,
 
@@ -260,9 +262,9 @@ export const EmployeeDetails = () => {
                     <div>
 
 
-                        <label>Mothers Name</label>
+                        <label className='text-black'>Mothers Name</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("MothersName", {
                                 required: true,
 
@@ -284,9 +286,9 @@ export const EmployeeDetails = () => {
                     <div>
 
 
-                        <label>Spouse Name</label>
+                        <label className='text-black'>Spouse Name</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Name", {
                                 required: true,
                                 maxLength: 20,
@@ -303,9 +305,9 @@ export const EmployeeDetails = () => {
                     </div>
 
                     <div>
-                        <label>SpousePhone No</label>
+                        <label className='text-black'>SpousePhone No</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Phone-No", {
                                 required: true,
 
@@ -315,9 +317,9 @@ export const EmployeeDetails = () => {
 
 
                     <div>
-                        <label>spouse Email</label>
+                        <label className='text-black'>spouse Email</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("email", {
                                 required: true,
                                 pattern: {
@@ -337,9 +339,9 @@ export const EmployeeDetails = () => {
 
 
                     <div>
-                        <label>Bank Account</label>
+                        <label className='text-black'>Bank Account</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("Bank-Account", {
                                 required: true,
                             })}
@@ -348,9 +350,9 @@ export const EmployeeDetails = () => {
 
 
                     <div>
-                        <label>TIN</label>
+                        <label className='text-black'>TIN</label>
                         <input
-                           className='focus:outline-none'
+                           className='form-input'
                             {...register("TIN", {
                                 required: true,
 
@@ -362,7 +364,7 @@ export const EmployeeDetails = () => {
 
                 </div>
                 <div className=' w-56  items-center'>
-                <input className='w-56 ' type="submit" />
+                <input className='bg-blue-600 text-white font-semibold text-center p-3 rounded-md ' type="submit" />
                 </div>
 
 
