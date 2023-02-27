@@ -51,14 +51,38 @@ const AddNewPolicy = ({ id, modalName }) => {
                                 <div className="mb-4">
 
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none"
-                                        type="number"
-                                        placeholder="amount" {...register("amount", {})} />
+                                        type="text"
+                                        placeholder="amount" {...register("amount",
+
+
+                                            {
+                                                required: true,
+                                                pattern: {
+                                                    value: /^(0|[1-9]\d*)(\.\d+)?$/,
+                                                    
+                                                },
+
+
+
+
+
+
+                                            })} />
+                                    {errors?.amount?.type === "required" && <p>This field is required</p>}
                                 </div>
                                 <div className="mb-4">
 
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none"
                                         type="number"
-                                        placeholder="Duration" {...register("duration", {})} />
+                                        placeholder="Duration" {...register("duration", {
+                                            required: true,
+                                            pattern: {
+                                                value: /^(0|[1-9]\d*)(\.\d+)?$/,
+                                                
+                                            },
+
+                                        })} />
+                                    {errors?.duration?.type === "required" && <p>This field is required</p>}
                                 </div>
 
                             </div>
