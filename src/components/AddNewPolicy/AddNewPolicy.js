@@ -59,12 +59,8 @@ const AddNewPolicy = ({ id, modalName }) => {
                                                 required: true,
                                                 pattern: {
                                                     value: /^(0|[1-9]\d*)(\.\d+)?$/,
-                                                    
+
                                                 },
-
-
-
-
 
 
                                             })} />
@@ -73,12 +69,12 @@ const AddNewPolicy = ({ id, modalName }) => {
                                 <div className="mb-4">
 
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none"
-                                        type="number"
+                                        type="text"
                                         placeholder="Duration" {...register("duration", {
                                             required: true,
                                             pattern: {
                                                 value: /^(0|[1-9]\d*)(\.\d+)?$/,
-                                                
+
                                             },
 
                                         })} />
