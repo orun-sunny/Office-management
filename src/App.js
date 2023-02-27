@@ -9,6 +9,8 @@ import Extra from './components/AdmissionForm/AdmissionForm';
 import NoticeBoard from './components/NoticeBoard/NoticeBoard';
 import Modal from './Modal/Modal';
 import Provident from './components/Provident/Provident';
+import EmployeeProvident from './components/EmployeeProvident/EmployeeProvident';
+import AddNewPolicy from './components/AddNewPolicy/AddNewPolicy';
 
 function App() {
   const router =createBrowserRouter([
@@ -44,6 +46,16 @@ function App() {
   path: "provident",
   element: <div><Provident/></div>
 },
+{
+  path: "EmployeeProvident",
+  element: <div><EmployeeProvident/></div>
+},
+{
+  path: "AddNewPolicy",
+  element: <div><AddNewPolicy/></div>
+},
+
+
 
 
     // <Templates/>
