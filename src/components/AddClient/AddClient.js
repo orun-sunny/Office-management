@@ -129,7 +129,7 @@ const AddClient = ({ id, modalName }) => {
 
 
                                         </select></div>
-                                        <input className="w-full border py-3  pl-3   p-2 focus:outline-none" type="number" placeholder="Mobile No" {...register("contact_number", { required: true, minLength: 6, maxLength: 12 })} />
+                                        <input className="w-full border py-3  pl-3   p-2 focus:outline-none" type="number" placeholder="Mobile No" {...register("contact_number", { required: true, minLength: 8, maxLength: 11 })} />
                                     </div>
                                     {errors?.contact_number?.type === "required" && <p className="pt-4">This field is required</p>}
 
