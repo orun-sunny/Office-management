@@ -49,7 +49,10 @@ const EmployeeProvident = ({ id, modalName }) => {
 
                         <h6 className='text-center font-semibold'>recheck</h6>
                         <form className='' onSubmit={handleSubmit(onSubmit)}>
-                            {/* <h1 className='text-black no-underline'>notice board part-Role-hr </h1> */}
+                            {/* <h1 className='text-black no-underline'>notice board part
+                            
+                            
+                            </h1> */}
 
                             <div className=' '>
 

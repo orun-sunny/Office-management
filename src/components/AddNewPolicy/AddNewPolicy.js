@@ -51,7 +51,9 @@ const AddNewPolicy = ({ id, modalName }) => {
                                 <div className="mb-4">
 
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none"
-                                        type="text"
+                                        type="number"
+                                        min={500}
+                                        defaultValue={500}
                                         placeholder="amount" {...register("amount",
 
 
@@ -59,21 +61,30 @@ const AddNewPolicy = ({ id, modalName }) => {
                                                 required: true,
                                                 pattern: {
                                                     value: /^(0|[1-9]\d*)(\.\d+)?$/,
+                                                    message: "input will number"
 
                                                 },
 
 
                                             })} />
+                                    {/* {formState.errors.amount?.message && (
+                                        <FormError errorMessage={formState.errors.amount?.message} />
+                                    )} */}
+
                                     {errors?.amount?.type === "required" && <p>This field is required</p>}
+
                                 </div>
                                 <div className="mb-4">
 
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none"
-                                        type="text"
-                                        placeholder="Duration" {...register("duration", {
+                                        type="number"
+                                        min={1}
+                                        defaultValue={1}
+                                        placeholder="Duration Year" {...register("duration", {
                                             required: true,
                                             pattern: {
                                                 value: /^(0|[1-9]\d*)(\.\d+)?$/,
+                                                message: "invalid email address"
 
                                             },
 

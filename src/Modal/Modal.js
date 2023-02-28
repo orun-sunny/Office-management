@@ -60,7 +60,7 @@ const useModal = ({ id, modalName }) => {
                 >
                     <div className="bg-white  absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 dark:bg-white-500 dark:text-white p-3 w-72 md:w-3/4 lg:w-[600px] lg:p-8 rounded-md">
                         <form className='' onSubmit={handleSubmit(onSubmit)}>
-                            {/* <h1 className='text-black no-underline'>notice board part-Role-hr </h1> */}
+                            <h4 className='text-black no-underline'>notice board part-Role-hr </h4>
 
                             <div className=' '>
 

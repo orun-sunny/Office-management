@@ -17,18 +17,18 @@ function NoticeBoard() {
 
 
 
-    // const handleEmployeeImage = (e) => {
-    //     console.log(e.target.files);
-    //     const file = e.target.files[0];
-    //     const fileReader = new FileReader();
-    //     if (file) {
-    //         fileReader.readAsDataURL(file);
-    //         fileReader.onload = () => {
-    //             setEmployeeImage(fileReader.result);
-    //         }
-    //     }
+    const handleEmployeeImage = (e) => {
+        console.log(e.target.files);
+        const file = e.target.files[0];
+        const fileReader = new FileReader();
+        if (file) {
+            fileReader.readAsDataURL(file);
+            fileReader.onload = () => {
+                setEmployeeImage(fileReader.result);
+            }
+        }
 
-    // }
+    }
 
     // const ParseTextarea = ({ value = [], onChange }) => {
     //     const [text, setText] = React.useState<string>(value.join("\n"));
@@ -58,7 +58,7 @@ function NoticeBoard() {
         <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
             <h1 className='text-black no-underline'>Provident Fund </h1>
             <div className=''>
-                {/* <div className="relative w-28 h-28">
+                <div className="relative w-28 h-28">
                     <img className="w- h-full" src={employeeImage} />
                     <input
                         {...register("profile_photo_url", {
@@ -73,9 +73,9 @@ function NoticeBoard() {
                     <div className="w-9 h-9 bg-gray-100 rounded-full absolute bottom-0 right-2 flex justify-center items-center">
                         <AiOutlineCamera className="text-2xl"></AiOutlineCamera>
                     </div>
-                </div> */}
-                {/* {errors.profile_photo_url?.type === 'required' &&
-                    <span className="label-text-alt text-xs text-red-600">{errors.profile_photo_url.message}</span>} */}
+                </div>
+                {errors.profile_photo_url?.type === 'required' &&
+                    <span className="label-text-alt text-xs text-red-600">{errors.profile_photo_url.message}</span>}
 
 
 
