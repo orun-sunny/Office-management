@@ -123,10 +123,16 @@ const AddClient = ({ id, modalName }) => {
                                     {/* <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black" type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} /> */}
 
 
-                                    <div class="flex py-3">
-                                        <span class="flex items-center justify-center border  px-3 dark:text-black"><i > <FaPhone /> </i></span>
-                                        <input class="w-full border py-3  pl-3   p-2 focus:outline-none" type="number" placeholder="Mobile No" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} />
+                                    <div className="flex py-3">
+                                        <div className="flex items-center justify-center border  px-3 dark:text-black"> <select>      <option value="one">+88</option>
+
+
+
+                                        </select></div>
+                                        <input className="w-full border py-3  pl-3   p-2 focus:outline-none" type="number" placeholder="Mobile No" {...register("contact_number", { required: true, minLength: 6, maxLength: 12 })} />
                                     </div>
+                                    {errors?.contact_number?.type === "required" && <p className="pt-4">This field is required</p>}
+
 
 
                                     <div>
@@ -135,7 +141,7 @@ const AddClient = ({ id, modalName }) => {
                                             type="number"
                                             min={1}
                                             defaultValue={1}
-                                            placeholder="Project-Quantity" {...register("quantity",
+                                            placeholder="project_count" {...register("project_count",
 
 
                                                 {
@@ -150,7 +156,7 @@ const AddClient = ({ id, modalName }) => {
                                                 })} />
 
 
-                                        {errors?.amount?.type === "required" && <p>This field is required</p>}
+                                        {errors?.project_count?.type === "required" && <p>This field is required</p>}
 
                                     </div>
                                 </div>
