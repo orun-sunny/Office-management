@@ -1,9 +1,11 @@
 import { Modal } from "@mui/material";
+import { FaPhone } from "react-icons/fa";
 
 import React, { useState } from "react";
 import user from "../../components/images/user.webp";
 import { AiOutlineCamera } from "react-icons/ai";
 import { useForm } from "react-hook-form";
+
 
 
 const AddClient = ({ id, modalName }) => {
@@ -103,6 +105,7 @@ const AddClient = ({ id, modalName }) => {
 
 
 
+
                                 <div>
                                     <textarea
                                         placeholder="Address"
@@ -114,19 +117,25 @@ const AddClient = ({ id, modalName }) => {
                                     {/* <label>Blood Group</label> */}
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black" type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
                                 </div>
-                                <div className="mb-2 flex gap-12 w-full">
-                                    <div>
-                                        <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black" type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} />
+                                <div className=" py-3 flex gap-12 w-full">
 
+
+                                    {/* <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black" type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} /> */}
+
+
+                                    <div class="flex py-3">
+                                        <span class="flex items-center justify-center border  px-3 dark:text-black"><i > <FaPhone /> </i></span>
+                                        <input class="w-full border py-3  pl-3   p-2 focus:outline-none" type="number" placeholder="Mobile No" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} />
                                     </div>
 
+
                                     <div>
 
-                                        <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none"
+                                        <input className="border py-3 w-full pl-3 mt-2 rounded-md focus:outline-none"
                                             type="number"
                                             min={1}
                                             defaultValue={1}
-                                            placeholder="Project-Quantity" {...register("amount",
+                                            placeholder="Project-Quantity" {...register("quantity",
 
 
                                                 {
