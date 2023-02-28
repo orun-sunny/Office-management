@@ -93,7 +93,7 @@ const useModal = ({ id, modalName }) => {
                                     {errors?.Notice?.type === "required" && <p>This field is required</p>}
                                 </div>
                                 <div className="mb-4">
-                                    {/* <label>Blood Group</label> */}
+                              
                                     <select name="class"
                                         className="border w-full bg-white rounded-md p-2  text-gray-900 placeholder-transparent focus:outline-none"
                                         placeholder="Blood Group"

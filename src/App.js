@@ -11,6 +11,7 @@ import Modal from './Modal/Modal';
 import Provident from './components/Provident/Provident';
 import EmployeeProvident from './components/EmployeeProvident/EmployeeProvident';
 import AddNewPolicy from './components/AddNewPolicy/AddNewPolicy';
+import AddClient from './components/AddClient/AddClient';
 
 function App() {
   const router =createBrowserRouter([
@@ -54,6 +55,11 @@ function App() {
   path: "AddNewPolicy",
   element: <div><AddNewPolicy/></div>
 },
+{
+  path: "AddClient",
+  element: <div><AddClient/></div>
+},
+
 
 
 
