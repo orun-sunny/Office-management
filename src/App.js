@@ -12,6 +12,8 @@ import Provident from './components/Provident/Provident';
 import EmployeeProvident from './components/EmployeeProvident/EmployeeProvident';
 import AddNewPolicy from './components/AddNewPolicy/AddNewPolicy';
 import AddClient from './components/AddClient/AddClient';
+import ProvidentProfile from './components/ProvidentProfile/ProvidentProfile';
+import CreateBonus from './components/Bonus/CreateBonus/CreateBonus';
 
 function App() {
   const router =createBrowserRouter([
@@ -59,7 +61,16 @@ function App() {
   path: "AddClient",
   element: <div><AddClient/></div>
 },
+{
+  path: "CreateBonus",
+  element: <div><CreateBonus/></div>
+},
 
+
+// {
+//   path: "ProvidentProfile",
+//   element: <div><ProvidentProfile/></div>
+// },
 
 
 

@@ -17,7 +17,7 @@ export const EmployeeDetails = () => {
     return (
         <>
             <h1>Personal information</h1>
-            <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
+            <form className='w-full ' onSubmit={handleSubmit(onSubmit)}>
                 {/* <h1>Personal information</h1> */}
 
                 <div className='grid grid-cols-2 gap-4'>

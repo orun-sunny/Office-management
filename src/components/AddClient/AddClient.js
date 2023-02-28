@@ -117,21 +117,29 @@ const AddClient = ({ id, modalName }) => {
                                     {/* <label>Blood Group</label> */}
                                     <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black" type="text" placeholder="Email" {...register("Email", { required: true, pattern: /^\S+@\S+$/i })} />
                                 </div>
+                                {errors?.Email?.type === "required" && <p className="pt-4 text-xs text-red-600">This field is required</p>}
                                 <div className=" py-3 flex gap-12 w-full">
 
 
-                                    {/* <input className="border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black" type="tel" placeholder="Mobile number" {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })} /> */}
+
 
 
                                     <div className="flex py-3">
-                                        <div className="flex items-center justify-center border  px-3 dark:text-black"> <select>      <option value="one">+88</option>
+                                        <div className="flex items-center justify-center border  px-3 dark:text-black">
+
+                                            <select>
+                                                <option value="one">+88</option>
 
 
 
-                                        </select></div>
-                                        <input className="w-full border py-3  pl-3   p-2 focus:outline-none" type="number" placeholder="Mobile No" {...register("contact_number", { required: true, minLength: 8, maxLength: 11 })} />
+                                            </select>
+                                        </div>
+                                        <input className="w-full border py-3  pl-3   p-2 focus:outline-none"
+                                            type="number"
+                                            placeholder="Mobile No"
+                                            {...register("contact_number", { required: true, minLength: 8, maxLength: 11 })} />
                                     </div>
-                                    {errors?.contact_number?.type === "required" && <p className="pt-4">This field is required</p>}
+                                    {errors?.contact_number?.type === "required" && <p className="pt-4 text-xs text-red-600">This field is required</p>}
 
 
 
@@ -156,7 +164,7 @@ const AddClient = ({ id, modalName }) => {
                                                 })} />
 
 
-                                        {errors?.project_count?.type === "required" && <p>This field is required</p>}
+                                        {errors?.project_count?.type === "required" && <p className="text-xs text-red-600">This field is required</p>}
 
                                     </div>
                                 </div>
