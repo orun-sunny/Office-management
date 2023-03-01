@@ -67,10 +67,10 @@ function App() {
 },
 
 
-// {
-//   path: "ProvidentProfile",
-//   element: <div><ProvidentProfile/></div>
-// },
+{
+  path: "ProvidentProfile",
+  element: <div><ProvidentProfile/></div>
+},
 
 
 

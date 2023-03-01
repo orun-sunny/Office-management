@@ -56,7 +56,7 @@ function CreateBonus() {
             </form>
 
             <form className="w-96 p-4 sm:w-full md:w-full lg:w-full justify-center" onSubmit={handleSubmit(onSubmit)}>
-                <h4 className='font-bold text-center'>  "status": "new bonuse type created</h4>
+                <h4 className='font-bold text-center'>  "status": "new bonus type created</h4>
                 <input
                     className="border py-3 mb-4 pl-3 w-full  rounded-md focus:outline-none"
                     type="text"
