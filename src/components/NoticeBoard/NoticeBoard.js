@@ -3,10 +3,13 @@ import { Controller, useForm } from 'react-hook-form';
 import user from "../../components/images/user.webp";
 import { AiOutlineCamera } from "react-icons/ai";
 import { Button } from '@mui/material';
-
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+import { teal } from '@mui/material/colors';
 
 function NoticeBoard() {
     const [employeeImage, setEmployeeImage] = useState(user)
+    const [value, setValue] = useState()
     const {
         register,
         control,
@@ -30,30 +33,10 @@ function NoticeBoard() {
 
     }
 
-    // const ParseTextarea = ({ value = [], onChange }) => {
-    //     const [text, setText] = React.useState<string>(value.join("\n"));
-    // }
-
-    // const { control, handleSubmit } = useForm<{
-    //     emails: string[];
-    //     number: number;
-    //     ReactSelect: string;
-    //   }>({
-    //     defaultValues: {
-    //       emails: ["react@hook-form.com", "info@example.com"],
-    //       number: 0,
-    //       ReactSelect: "chocolate"
-    //     }
-    //   });
-
-    // const onSubmit = data => {
-    //     console.log("DATA", data);
-
-    // }
-
 
     const onSubmit = (data) => console.log(data);
     return (
+
 
         <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
             <h1 className='text-black no-underline'>Provident Fund </h1>
@@ -99,7 +82,7 @@ function NoticeBoard() {
 
 
 
-              
+
 
 
 
@@ -118,14 +101,31 @@ function NoticeBoard() {
                         })}
                     />
                 </div>
+                {/* <div>
+                    <PhoneInput
+                        placeholder="Enter phone number"
+                        international
+                        defaultCountry="Ba"
+                        value={value}
+                        onChange={setValue} />
+                </div> */}
 
 
 
                 <div>
                     <label>Duration</label>
-                    <input
+                    <PhoneInput
+                   
+                    
                         className=' border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black'
-                        {...register("Duration", {
+                        
+                        {...register("PhoneNumber", {
+                            placeholder:"Enter phone number",
+                            type:teal,
+                            international:"true",
+                            defaultCountry:"Ban",
+                            value:{value},
+                            onChange:{setValue},
                             required: true,
                         })}
                     />

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import pro from "../../components/images/pro.png"
+import pro from "../../components/images/aaDone.jpg"
+import { Button } from '@mui/material';
 
 function Demo() {
 
   return (
     <>
-      <div className="w-full  bg-gray-200  dark:bg-gray-800   flex  items-center  justify-center  ">
-        <div className="container lg:w-full  sm:w-full md:w-full    bg-white  shadow-lg    transform   duration-200 easy-in-out">
+      <div className="w-full  bg-gray-200  dark:bg-gray-800 m-4  grid items-center  justify-items-center  ">
+        {/* <div className="container lg:w-full  sm:w-full md:w-full    bg-white  shadow-lg    transform   duration-200 easy-in-out">
           <div className=" h-32 overflow-hidden" >
             <img className="w-full" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" alt="" />
           </div>
@@ -26,32 +27,83 @@ function Demo() {
             <hr className="mt-6" />
 
           </div>
-        </div>
+        </div> */}
       </div>
 
 
       <hr />
 
+      {/* 38  items-center justify-center */}
+      <div className="mt-8 ">
+        <div className="bg-gray-200  md:w-full lg:w-full mt-8 rounded-lg">
+          <div className="grid lg:justify-items-center  md:grid-cols-2 xs:grid-cols-1 gap-8 md:justify-items-start xs:justify-items-start lg:grid-cols-2 ">
+            <div className="m-4 ">
+              <img src={pro} className=" lg:w-full  rounded-lg" />
+            </div>
 
-      <div className="flex items-center justify-center pb-4">
-        <div className="bg-gray-200  w-full mt-10 rounded-lg">
-          <div className="flex items-center justify-center pt-10 flex-col">
-            <img src={pro} className="rounded-full w-32" />
-            <h1 className="text-gray-800 font-semibold text-xl mt-5">Habib Bhaiii</h1>
-            {/* <h1 className="text-gray-500 text-sm">Seoul, South Korea</h> */}
-            <h1 className="text-gray-500 text-sm p-4 text-center">
-            office-id:12345
-            </h1>
-            <h1 className="text-gray-500 text-sm p-4 text-center">
-            Phone:12345
-            </h1>
-          </div>
-          <div className="flex justify-between p-4">
-         
-            {/* <div>
-              <button className="text-xs text-green-300 border-2 py-1 px-2 border-green-300">Renew</button>
+{/* 
+            <div className='  mt-4   '>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Name: </p>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Office_id: </p>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Phone-Number: </p>
+
+
+
             </div> */}
+            <div className=" mt-4 ">
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Name: </p>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Office-id</p>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Phone_number</p>
+            </div>
+
+
           </div>
+
+          <div className="flex justify-center">
+            <hr className='border-dotted border-2 w-72  border-neutral-300' />
+          </div>
+
+
+
+
+
+
+          <div className="grid  lg:grid-cols-2  gap-4 mt-2 lg:justify-items-center md:justify-items-center xs:justify-items-start  md:grid-cols-2 xs:grid-cols-1">
+
+            <div className=" mt-4 ">
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Employee Amount</p>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>Total Amount</p>
+              <p className='text-gray-800 font-semibold text-xl mb-4 '>withdrawable</p>
+            </div>
+
+
+            <div className='mt-4  '>
+              <div>
+                <p className='text-gray-800 font-semibold text-xl mb-4 '>Eligibility</p>
+                <p className='text-gray-800 font-semibold text-xl mb-4 '>Company amount</p>
+                <p className='text-gray-800 font-semibold text-xl mb-4 '>Opening date</p>
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div className="flex items-center justify-center mt-3 mb-8 flex-col">
             <h1 className="text-xs text-gray-500">Get Connected</h1>
 
