@@ -10,12 +10,13 @@ import { teal } from '@mui/material/colors';
 function NoticeBoard() {
     const [employeeImage, setEmployeeImage] = useState(user)
     const [value, setValue] = useState()
+    // const [value, setPhoneNumber] = useState();
     const {
         register,
         control,
         handleSubmit,
         watch,
-        formState: { errors }
+        formState: { errors }, getValues
     } = useForm();
 
 
@@ -115,21 +116,25 @@ function NoticeBoard() {
                 <div>
                     <label>Duration</label>
                     <PhoneInput
-                   
-                    
+
+
                         className=' border py-3 w-full pl-3  rounded-md mb-3 focus:outline-none dark:text-black'
-                        
-                        {...register("PhoneNumber", {
-                            placeholder:"Enter phone number",
-                            type:teal,
-                            international:"true",
-                            defaultCountry:"Ban",
-                            value:{value},
-                            onChange:{setValue},
+
+
+                        placeholder="Enter phone number"
+                        value={value}
+                        onChange={setValue}
+                        inputProps={{
+                            name: 'phone',
                             required: true,
-                        })}
+                            autoFocus: true,
+                            ...register('phone', {
+                                required: 'Phone number is required',
+                            }),
+                        }}
                     />
                 </div>
+                {errors.phone && <span>{errors.phone.message}</span>}
             </div>
             <div className=' w-56 '>
                 <input className='bg-blue-600 text-white font-semibold text-center p-3 rounded-md ' type="submit" />
