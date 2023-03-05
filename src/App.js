@@ -14,6 +14,8 @@ import AddNewPolicy from './components/AddNewPolicy/AddNewPolicy';
 import AddClient from './components/AddClient/AddClient';
 import ProvidentProfile from './components/ProvidentProfile/ProvidentProfile';
 import CreateBonus from './components/Bonus/CreateBonus/CreateBonus';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import ServerError from './components/ErrorPage/ServerError';
 
 function App() {
   const router =createBrowserRouter([
@@ -71,6 +73,15 @@ function App() {
   path: "ProvidentProfile",
   element: <div><ProvidentProfile/></div>
 },
+{
+  path: "error",
+  element: <div><ErrorPage/></div>
+},
+{
+  path: "errors",
+  element: <div><ServerError/></div>
+},
+
 
 
 
