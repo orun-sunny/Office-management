@@ -1,8 +1,8 @@
 import { Modal } from "@mui/material";
 
-import React, {  useState } from "react";
+import React, { useState } from "react";
 
-import {  useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 
 const Overtime = ({ }) => {
@@ -58,7 +58,7 @@ const Overtime = ({ }) => {
 
 
                                 <div className="">
-                                <label className="mb-2 font-semibold text-gray-700">Start-Time</label>
+                                    <label className="mb-2 font-semibold text-gray-700">Start-Time</label>
 
                                     <input
                                         type="time" className="w-full p-5 bg-white border border-gray-200 rounded shadow-sm appearance-none focus:outline-none py-4 mb-3"
@@ -73,11 +73,11 @@ const Overtime = ({ }) => {
                                     {errors?.startTime?.type === "required" && <p className="text-red-500">This field is required</p>}
                                 </div>
 
-                       
+
 
 
                                 <div className="">
-                                <label className="mb-2 font-semibold text-gray-700">Delay-Time</label>
+                                    <label className="mb-2 font-semibold text-gray-700">Delay-Time</label>
 
                                     <input
                                         type="time" className="w-full p-5 bg-white border border-gray-200 rounded shadow-sm appearance-none focus:outline-none py-4 mb-3"
@@ -106,7 +106,7 @@ const Overtime = ({ }) => {
                                     />
                                     {errors?.End_time?.type === "required" && <p className="text-red-500">This field is required</p>}
                                 </div>
-                          
+
 
 
 
@@ -114,7 +114,7 @@ const Overtime = ({ }) => {
 
                             <div className=' w-56 '>
                                 <input className='bg-blue-600 text-white font-semibold text-center p-3 rounded-md ' type="submit" />
-                   
+
                             </div>
                         </form>
                     </div>
