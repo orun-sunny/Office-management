@@ -16,6 +16,7 @@ import ProvidentProfile from './components/ProvidentProfile/ProvidentProfile';
 import CreateBonus from './components/Bonus/CreateBonus/CreateBonus';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import ServerError from './components/ErrorPage/ServerError';
+import Overtime from "./components/Overtime/Overtime";
 
 function App() {
   const router =createBrowserRouter([
@@ -81,6 +82,11 @@ function App() {
   path: "errors",
   element: <div><ServerError/></div>
 },
+    {
+      path: "overtime",
+      element: <div><Overtime/></div>
+    },
+
 
 
 

@@ -1,13 +1,13 @@
 
 import { Modal } from '@mui/material';
-import React, { useEffect, useState } from "react";
-import { useFieldArray, Controller, useForm } from "react-hook-form";
+import React, {  useState } from "react";
+import {  useForm } from "react-hook-form";
 // import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
 const Provident = ({ id, modalName }) => {
     const [modalOpen, setModalOpen] = useState(false);
-    const [age, setAge] = React.useState('');
+    // const [age, setAge] = React.useState('');
 
     // const handleChange = (event: SelectChangeEvent) => {
     //     setAge(event.target.value);
@@ -15,10 +15,10 @@ const Provident = ({ id, modalName }) => {
 
     const {
         register,
-        control,
+
         handleSubmit,
         formState: { errors },
-        setValue
+
     } = useForm();
 
     const handleOpen = () => {
