@@ -78,7 +78,7 @@ export default function Recruitment() {
             <>
               <select className='w-full' {...register("Department", { required: true })}>
                 <option value="select">Vacancy Dept</option>
-                <option value="Sales">Frontend</option>
+                <option value="Engineering">Frontend</option>
                 <option value="Engineering">Backend</option>
                 <option value="Sales">Intern</option>
               </select>
