@@ -40,6 +40,7 @@ function Demo() {
             <div className="m-4 ">
               <img src={pro} className=" lg:w-full  rounded-lg" />
             </div>
+            <div></div>
 
 {/* 
             <div className='  mt-4   '>
