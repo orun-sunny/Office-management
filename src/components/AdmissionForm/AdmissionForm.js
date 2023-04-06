@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 
-// import './AdmissionForm.css'
+
 import user from "../../components/images/user.webp";
 import { AiOutlineCamera } from "react-icons/ai";
-// import {useDispatch, useSelector} from "react-redux";
-// import {fetchOrders} from "../../../Slices/exSlice";
+
 const AdmissionForm = () => {
     const [employeeImage, setEmployeeImage] = useState(user)
 
