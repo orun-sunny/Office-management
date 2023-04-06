@@ -475,128 +475,13 @@ const AdmissionForm = () => {
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg mx-auto overflow-hidden shadow-sm shadow-gray-400 p-5">
-                    <p className="font-semibold text-lg text-teal-600 my-2">Local Guardians Information</p>
-
-
-                    <div className="w-full pr-4">
-                        {/* <div className="relative w-28 h-28">
-                            <img className="w-full h-full rounded-full" src={localGuardianImage} />
-                            <input
-                                {...register("local_parent_photo_url", {
-                                    required: {
-                                        value: true,
-                                        message: 'Local Guardian Image is Required'
-                                    }
-                                })}
-                                onChange={(e) => handleLocalGuardianImage(e)}
-                                type="file" multiple={true} className="opacity-0 absolute z-50 top-0 w-full h-full"
-                            />
-                            <div className="w-9 h-9 bg-gray-100 rounded-full absolute bottom-0 right-2 flex justify-center items-center">
-                                <AiOutlineCamera className="text-2xl"></AiOutlineCamera>
-                            </div>
-                        </div> */}
-
-                        {errors.local_parent_photo_url?.type === 'required' &&
-                            <span className="label-text-alt text-xs text-red-600">{errors.local_parent_photo_url.message}</span>}
-                        <div className="flex items-center gap-6">
-                            <div class="my-4 relative w-full py-2">
-                                <input type="text" name="name"
-                                    className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                    placeholder="Local Parent Name"  {...register("local_parent_name", {
-                                        required: {
-                                            value: true,
-                                            message: 'Local Guardian Name is Required'
-                                        }
-                                    })} />
-                                <label htmlFor="father_name" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Name</label>
-                                {errors.local_parent_name?.type === 'required' &&
-                                    <span className="label-text-alt text-xs text-red-600">{errors.local_parent_name.message}</span>}
-                            </div>
-
-                            <div class="my-4 relative w-full py-2">
-                                <input type="email" name="email"
-                                    className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                    placeholder="Email"  {...register("local_parent_email", {
-                                        required: {
-                                            message: 'Local Guardian Email is Required'
-                                        }
-                                    })} />
-                                <label htmlFor="email" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email</label>
-
-                                {errors.local_parent_email?.type === 'required' &&
-                                    <span className="label-text-alt text-xs text-red-600">{errors.local_parent_email.message}</span>}
-                            </div>
-                        </div>
-
-
-                        <div className="flex items-center gap-6">
-                            <div class="my-4 relative w-full py-2">
-                                <input type="number" name="nid"
-                                    className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                    placeholder="Local Guardian NID"  {...register("local_parent_nid", {
-                                        required: {
-                                            value: true,
-                                            message: 'Local Guardian NID is Required'
-                                        }
-                                    })} />
-                                <label htmlFor="father_nid" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">NID</label>
-                                {errors.local_parent_nid?.type === 'required' &&
-                                    <span className="label-text-alt text-xs text-red-600">{errors.local_parent_nid.message}</span>}
-                            </div>
-                            <div class="my-4 relative w-full py-2">
-                                <input type="number" name="name"
-                                    className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                    placeholder="Local Guardian phone"  {...register("local_parent_phone", {
-                                        required: {
-                                            value: true,
-                                            message: 'Local Guardian Phone is Required'
-                                        }
-                                    })} />
-                                <label htmlFor="local_parent_phone" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Phone Number</label>
-                                {errors.local_parent_phone?.type === 'required' &&
-                                    <span className="label-text-alt text-xs text-red-600">{errors.local_parent_phone.message}</span>}
-                            </div>
-                        </div>
-
-                    </div>
-                    <div>
-
-                        <div class="my-4 relative w-full py-2">
-                            <input type="number" name="name"
-                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                placeholder="Local Guardian phone"  {...register("local_parent_phone", {
-                                    required: {
-                                        value: true,
-                                        message: 'Local Guardian Phone is Required'
-                                    }
-                                })} />
-                            <label htmlFor="local_parent_phone" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Phone Number</label>
-                            {errors.local_parent_phone?.type === 'required' &&
-                                <span className="label-text-alt text-xs text-red-600">{errors.local_parent_phone.message}</span>}
-                        </div>
-                        <div class="my-4 relative w-full py-2">
-                            <input type="number" name="name"
-                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                placeholder="Local Guardian phone"  {...register("local_parent_phone", {
-                                    required: {
-                                        value: true,
-                                        message: 'Local Guardian Phone is Required'
-                                    }
-                                })} />
-                            <label htmlFor="local_parent_phone" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Phone Number</label>
-                            {errors.local_parent_phone?.type === 'required' &&
-                                <span className="label-text-alt text-xs text-red-600">{errors.local_parent_phone.message}</span>}
-                        </div>
-
-                    </div>
 
 
 
 
 
 
-                </div>
+
 
                 <button type="submit" className="px-10 py-2 bg-teal-500 rounded-md text-white my-5">Submit
                 </button>
