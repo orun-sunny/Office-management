@@ -8,19 +8,9 @@ import { AiOutlineCamera } from "react-icons/ai";
 // import {fetchOrders} from "../../../Slices/exSlice";
 const AdmissionForm = () => {
     const [employeeImage, setEmployeeImage] = useState(user)
-    const [fatherImage, setFatherImage] = useState(user)
-    const [motherImage, setMotherImage] = useState(user)
-    const [localGuardianImage, setLocalGuardianImage] = useState(user)
+
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    // const ex = useSelector((state) => state.orders);
-    // console.log(ex.orders);
 
-    // const dispatch = useDispatch();
-
-    // useEffect(() =>{
-    //     dispatch(fetchOrders());
-
-    // }, [dispatch])
 
 
     const handleEmployeeImage = (e) => {
@@ -86,19 +76,7 @@ const AdmissionForm = () => {
                                 <span className="label-text-alt text-xs text-red-600">{errors.employee_name.message}</span>}
                         </div>
 
-                        {/* <div class="relative w-full my-6">
-                            <input type="text" name="name"
-                                className="shadow_0 peer  border-b-2 border-gray-400 outline-1 focus:shadow-gray-50 h-10 w-full border-0 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-300"
-                                placeholder="Employee Name"  {...register("name", {
-                                    required: {
-                                        value: true,
-                                        message: 'Employee Name is Required'
-                                    }
-                                })} />
-                            <label htmlFor="student_name" className="absolute left-0 -top-3.5 text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Employee Name</label>
-                            {errors.name?.type === 'required' &&
-                                <span className="label-text-alt text-xs text-red-600">{errors.name.message}</span>}
-                        </div> */}
+
 
                         <div class="my-4 relative w-full py-2">
                             <input type="email" name="email"
@@ -315,22 +293,7 @@ const AdmissionForm = () => {
                     <div className="flex items-center">
                         <div className="w-full pr-4">
                             <p className="text-md text-gray-600">Father:</p>
-                            {/* <div className="relative w-28 h-28">
-                                <img className="w-full h-full rounded-full" src={fatherImage} />
-                                <input
-                                    {...register("father_photo_url", {
-                                        required: {
-                                            value: true,
-                                            message: 'Father Image is Required'
-                                        }
-                                    })}
-                                    onChange={(e) => handleFatherImage(e)}
-                                    type="file" multiple={true} className="opacity-0 absolute z-50 top-0 w-full h-full"
-                                />
-                                <div className="w-9 h-9 bg-gray-100 rounded-full absolute bottom-0 right-2 flex justify-center items-center">
-                                    <AiOutlineCamera className="text-2xl"></AiOutlineCamera>
-                                </div>
-                            </div> */}
+
 
                             {errors.father_photo_url?.type === 'required' &&
                                 <span className="label-text-alt text-xs text-red-600">{errors.father_photo_url.message}</span>}
@@ -396,22 +359,7 @@ const AdmissionForm = () => {
 
                         <div className="w-full border-l-2 pl-4">
                             <p className="text-gray-600 text-md">Mother:</p>
-                            {/* <div className="relative w-28 h-28">
-                                <img className="w-full h-full rounded-full" src={motherImage} />
-                                <input
-                                    {...register("mother_photo_url", {
-                                        required: {
-                                            value: true,
-                                            message: 'Mother Image is Required'
-                                        }
-                                    })}
-                                    onChange={(e) => handleMotherImage(e)}
-                                    type="file" multiple={true} className="opacity-0 absolute z-50 top-0 w-full h-full"
-                                />
-                                <div className="w-9 h-9 bg-gray-100 rounded-full absolute bottom-0 right-2 flex justify-center items-center">
-                                    <AiOutlineCamera className="text-2xl"></AiOutlineCamera>
-                                </div>
-                            </div> */}
+
                             {errors.mother_photo_url?.type === 'required' &&
                                 <span className="label-text-alt text-xs text-red-600">{errors.mother_photo_url.message}</span>}
 
